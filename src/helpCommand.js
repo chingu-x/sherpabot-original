@@ -1,9 +1,9 @@
-const askCommand = require('./askCommand');
-const docCommand = require('./docCommand');
-const issueCommand = require('./issueCommand');
-const scheduleCommand = require('./scheduleCommand');
-const socialCommand = require('./socialCommand');
-const timeCommand = require('./timeCommand');
+const askCommand = require('./askCommand')
+const docCommand = require('./docCommand')
+const issueCommand = require('./issueCommand')
+const scheduleCommand = require('./scheduleCommand')
+const socialCommand = require('./socialCommand')
+const timeCommand = require('./timeCommand')
 
 class helpCommand {
   /**
@@ -24,31 +24,31 @@ class helpCommand {
       { argument: 'schedule', reply: scheduleCommand.help },
       { argument: 'social', reply: socialCommand.help },
       { argument: 'time', reply: timeCommand.help },
-    ];
+    ]
 
     if (command !== '' && command !== 'help') {
       msg.reply(`Sherpabot error: Help command routing error (command=${command}). \
-  Please report this to a Chingu administrator.`);
-      console.log(`Sherpabot error: Help command routing error (command=${command})`);
-      return;
+  Please report this to a Chingu administrator.`)
+      console.log(`Sherpabot error: Help command routing error (command=${command})`)
+      return
     }
 
-    let commandArg = args[0];
+    let commandArg = args[0]
     if ( commandArg === undefined) {
-      commandArg = '';
+      commandArg = ''
     }
 
     for(let i = 0; i < helpCmdArgs.length; i++) {
       if (helpCmdArgs[i].argument === commandArg) {
-        msg.reply(helpCmdArgs[i].reply(commandPrefix));
-        return;
+        msg.reply(helpCmdArgs[i].reply(commandPrefix))
+        return
       }
     }
 
     msg.reply(`I'm sorry, but I don't understand \`${commandArg}\`. Use \
-    \`${commandPrefix}help\` to see a list of valid commands.`);
+    \`${commandPrefix}help\` to see a list of valid commands.`)
 
-  };
+  }
 
   /**
    * Retrieve a string containing help information for the 'help`
@@ -68,8 +68,8 @@ class helpCommand {
 \n\`${commandPrefix}help sched|schedule\` - Access the Chingu Schedule of Events \
 \n\`${commandPrefix}help social\` - Display URLs for Chingu social media sites \
 \n\`${commandPrefix}help time\` - Display the time \
-      `;
+      `
   }
-};
+}
 
-module.exports = helpCommand;
+module.exports = helpCommand

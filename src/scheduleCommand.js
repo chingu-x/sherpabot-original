@@ -9,13 +9,13 @@ class scheduleCommand {
   static async process(msg, commandPrefix, command, args) {
     if (command !== 'schedule' && command !== 'sched') {
       msg.reply(`Sherpabot error: Schedule command routing error \`(command=${command})\`. \
-  Please report this to a Chingu administrator.`);
-      console.log(`Sherpabot error: Issue command routing error (command=${command})`);
-      return;
+  Please report this to a Chingu administrator.`)
+      console.log(`Sherpabot error: Issue command routing error (command=${command})`)
+      return
     }
 
-    msg.reply('https://chingu.docs.chingu.io/intro/schedule');
-  };
+    msg.reply('https://chingu.docs.chingu.io/intro/schedule')
+  }
 
   /**
    * Retrieve a string containing help information for the 'schedule`
@@ -28,9 +28,9 @@ class scheduleCommand {
   static help(commandPrefix) {
     return ` __**Sherpa schedule Commands:**__ \
 \n\`${commandPrefix}issue\` - How to open an issue for the Chingu team \
-      `;
-  };
+      `
+  }
 
-};
+}
 
-module.exports = scheduleCommand;
+module.exports = scheduleCommand

@@ -10,13 +10,13 @@ class askCommand {
   static async process(msg, commandPrefix, command, args) {
     if (command !== 'ask') {
       msg.reply(`Sherpabot error: Ask command routing error \`(command=${command})\`. \
-Please report this to a Chingu administrator.`);
-      console.log(`Sherpabot error: Ask command routing error (command=${command})`);
-      return;
+Please report this to a Chingu administrator.`)
+      console.log(`Sherpabot error: Ask command routing error (command=${command})`)
+      return
     }
 
-    msg.reply('https://chingu.docs.chingu.io/about/askhelp');
-  };
+    msg.reply('https://chingu.docs.chingu.io/about/askhelp')
+  }
 
   /**
    * Retrieve a string containing help information for the 'ask`
@@ -28,8 +28,8 @@ Please report this to a Chingu administrator.`);
    */
   static help(commandPrefix) {
     return ` __**Sherpa ask Commands:**__ \
-\n\`${commandPrefix}ask\` - Display tips on how to ask for help`;
-  };
-};
+\n\`${commandPrefix}ask\` - Display tips on how to ask for help`
+  }
+}
 
-module.exports = askCommand;
+module.exports = askCommand

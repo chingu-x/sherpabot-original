@@ -5,19 +5,19 @@
  */
 class Message {
   constructor() {
-    this.lastReply = '';
+    this.lastReply = ''
   }
 
   // Retrieve the last reply
   getLastReply() {
-    return this.lastReply;
+    return this.lastReply
   }
 
   // Mock the Discord message object reply function
   reply(messageText) {
-    console.log(messageText);
-    this.lastReply = messageText;
+    console.log(messageText)
+    this.lastReply = messageText
   }
 }
 
-module.exports = Message;
+module.exports = Message

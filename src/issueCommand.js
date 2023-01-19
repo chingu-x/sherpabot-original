@@ -9,14 +9,14 @@ class issueCommand {
   static async process(msg, commandPrefix, command, args) {
     if (command !== 'issue') {
       msg.reply(`Sherpabot error: Issue command routing error \`(command=${command})\`. \
-  Please report this to a Chingu administrator.`);
-      console.log(`Sherpabot error: Issue command routing error (command=${command})`);
-      return;
+  Please report this to a Chingu administrator.`)
+      console.log(`Sherpabot error: Issue command routing error (command=${command})`)
+      return
     }
 
-    msg.reply('https://chingu.docs.chingu.io/about/rptissue');
+    msg.reply('https://chingu.docs.chingu.io/about/rptissue')
 
-  };
+  }
 
   /**
    * Retrieve a string containing help information for the 'issue`
@@ -29,9 +29,9 @@ class issueCommand {
   static help(commandPrefix) {
     return ` __**Sherpa issue Commands:**__ \
 \n\`${commandPrefix}issue\` - How to open an issue for the Chingu team \
-      `;
-  };
+      `
+  }
 
-};
+}
 
-module.exports = issueCommand;
+module.exports = issueCommand
